@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap Link-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!--Css Link-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>TODO App</title>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <h3 class="fw-bold mb-3">TODO App</h3>
+      <div class="addNewPost" id="addNewPost">
+        <span> Add New Task </span>
+        <i class="fa-solid fa-plus" data-toggle="modal" data-target="#form"></i>
+      </div>
+      <h5 class="text-center my-2">Tasks</h5>
+
+      <!-- Modal -->
+      <form
+        class="modal fade"
+        id="form"
+        role="dialog"
+        tabindex="-1"
+        aria-labelledby="formLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="formLabel">Add New Task</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form1">
+                <label for="">Task Title</label>
+                <input class="form-control my-2" type="text" id="textInput" />
+                <p id="errorMessage"></p>
+                <label for="">Due Date</label>
+                <input class="form-control my-2" type="date" id="dateInput" />
+                <p id="errorMessage1"></p>
+                <label for="">Description</label>
+                <textarea
+                  class="form-control my-2"
+                  name="textarea"
+                  cols="20"
+                  rows="5"
+                  id="textArea"
+                ></textarea>
+                <p id="errorMessage2"></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" id="addButton" class="btn btn-primary">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!--Tasks-->
+      <div class="tasks" id="tasks"></div>
+    </div>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--App Javascript Script-->
+    <script src="app.js"></script>
+  </body>
+</html>

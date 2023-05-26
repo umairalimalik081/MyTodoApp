@@ -1,0 +1,69 @@
+body{
+    background-color: grey;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app{
+    width:320px;
+    height:500px;
+    background-color: aliceblue;
+    border: 4px solid rgb(32, 170, 32);
+    border-radius: 5px;
+    padding:10px;
+    overflow-y:scroll;
+}
+.app::-webkit-scrollbar {
+     width: 0 !important 
+}
+.addNewPost{
+    display: flex;
+    background-color: rgba(103, 176, 69, 0.35);
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.addNewPost i{
+    background-color: rgb(123, 192, 123);
+    padding: 3px;
+    border-radius: 2px;
+    
+}
+
+/*Tasks*/
+.tasks{
+    display: grid;
+    gap: 10px;
+}
+.tasks div{
+    background-color:  rgba(103, 176, 69, 0.35);
+    border: 2px solid  rgb(123, 192, 123);
+    padding: 5px;
+    border-radius: 3px;
+    display: grid;
+    gap: 3px;
+}
+
+#options{
+    display: flex;
+    gap:14px;
+    justify-self: center;
+    
+}
+#options i{
+    cursor: pointer;
+}
+.modal{
+    opacity: 1 !important;
+    padding-top: 20px;
+}
+
+.form1 p{
+    color: red;
+    font-size: small;
+}
